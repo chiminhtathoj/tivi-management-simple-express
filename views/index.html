@@ -1,4 +1,3 @@
-<!-- views/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>Tivi Search</h1>
+    <h1>TV Search</h1>
     <form id="filterForm">
         <input type="text" id="searchName" placeholder="Search by name">
         <input type="number" id="minPrice" placeholder="Min Price">
@@ -16,7 +15,12 @@
         <select id="nhomTivi">
             <option value="">All Groups</option>
         </select>
-        <button id="filter" type="submit">Filter</button>
+        <select id="status">
+            <option value="">All Status</option>
+            <option value="inStock">In Stock</option>
+            <option value="outOfStock">Out of Stock</option>
+        </select>
+        <button type="submit">Filter</button>
     </form>
     <table id="resultsTable">
         <thead>
@@ -24,6 +28,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Group</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody id="results">

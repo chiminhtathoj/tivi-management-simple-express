@@ -4,6 +4,13 @@ const path = require('path');
 class Tivi {
   constructor(data) {
     Object.assign(this, data);
+    this.Trang_thai_Con_hang = this.tinhTrangThaiConHang();
+  }
+
+  tinhTrangThaiConHang() {
+    const soLuongNhap = this.Danh_sach_Nhap_hang.reduce((total, item) => total + item.So_luong, 0);
+    const soLuongBan = this.Danh_sach_Ban_hang.reduce((total, item) => total + item.So_luong, 0);
+    return soLuongNhap > soLuongBan;
   }
 
   static getAll() {
@@ -22,7 +29,10 @@ class Tivi {
                            (!criteria.maxPrice || tivi.Don_gia_Ban <= criteria.maxPrice);
       const matchesGroup = !criteria.nhomTivi || tivi.Nhom_Tivi.Ma_so === criteria.nhomTivi;
       const matchesName = !criteria.name || tivi.Ten.toLowerCase().includes(criteria.name.toLowerCase());
-      return priceInRange && matchesGroup && matchesName;
+      const matchesStatus = !criteria.status ||
+                            (criteria.status === 'inStock' && tivi.Trang_thai_Con_hang) ||
+                            (criteria.status === 'outOfStock' && !tivi.Trang_thai_Con_hang);
+      return priceInRange && matchesGroup && matchesName && matchesStatus;
     });
   }
 

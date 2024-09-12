@@ -7,12 +7,13 @@ exports.getAllTivi = (req, res) => {
 
 exports.filterTivi = (req, res) => {
   const allTivis = Tivi.getAll();
-  const { minPrice, maxPrice, nhomTivi, name } = req.query;
+  const { name, minPrice, maxPrice, nhomTivi, status } = req.query;
   const filteredTivis = Tivi.filter(allTivis, {
+    name,
     minPrice: minPrice ? parseInt(minPrice) : null,
     maxPrice: maxPrice ? parseInt(maxPrice) : null,
     nhomTivi,
-    name
+    status
   });
   res.json(filteredTivis);
 };

@@ -68,3 +68,13 @@ tr:hover {
 #nhomTivi {
     width: 120px;
 }
+
+.in-stock {
+    color: green;
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+}

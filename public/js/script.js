@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const minPrice = document.getElementById('minPrice').value;
       const maxPrice = document.getElementById('maxPrice').value;
       const nhomTivi = document.getElementById('nhomTivi').value;
+      const status = document.getElementById('status').value;
 
-      const response = await fetch(`/api/tivi/filter?name=${name}&minPrice=${minPrice}&maxPrice=${maxPrice}&nhomTivi=${nhomTivi}`);
+      const response = await fetch(`/api/tivi/filter?name=${name}&minPrice=${minPrice}&maxPrice=${maxPrice}&nhomTivi=${nhomTivi}&status=${status}`);
       const data = await response.json();
       displayTivis(data);
   });
@@ -40,6 +41,9 @@ function displayTivis(tivis) {
           <td>${tv.Ten}</td>
           <td>${tv.Don_gia_Ban.toLocaleString()} VND</td>
           <td>${tv.Nhom_Tivi.Ten}</td>
+          <td class="${tv.Trang_thai_Con_hang ? 'in-stock' : 'out-of-stock'}">
+              ${tv.Trang_thai_Con_hang ? 'In Stock' : 'Out of Stock'}
+          </td>
       </tr>
   `).join('');
 }

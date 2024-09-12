@@ -8,6 +8,23 @@
 		"Ten": "Samsung",
 		"Ma_so": "SAMSUNG"
 	},
-	"Danh_sach_Ban_hang": [],
-	"Danh_sach_Nhap_hang": []
+  "Danh_sach_Ban_hang": [
+    {
+      "Ngay": "2024-09-15",
+      "So_luong": 2,
+      "Don_gia": 12390000
+    },
+    {
+      "Ngay": "2024-09-20",
+      "So_luong": 1,
+      "Don_gia": 12390000
+    }
+  ],
+  "Danh_sach_Nhap_hang": [
+    {
+      "Ngay": "2024-09-01",
+      "So_luong": 5,
+      "Don_gia": 10390000
+    }
+  ]
 }
