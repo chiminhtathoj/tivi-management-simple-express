@@ -1,0 +1,13 @@
+{
+	"Ten": "TV BELCO",
+	"Ma_so": "TIVI_35",
+	"Ky_hieu": "32LE280X",
+	"Don_gia_Ban": 8640000,
+	"Don_gia_Nhap": 7540000,
+	"Nhom_Tivi": {
+		"Ten": "Khác",
+		"Ma_so": "KHAC"
+	},
+	"Danh_sach_Ban_hang": [],
+	"Danh_sach_Nhap_hang": []
+}

@@ -1,0 +1,34 @@
+<!-- views/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Search</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Tivi Search</h1>
+    <form id="filterForm">
+        <input type="text" id="searchName" placeholder="Search by name">
+        <input type="number" id="minPrice" placeholder="Min Price">
+        <input type="number" id="maxPrice" placeholder="Max Price">
+        <select id="nhomTivi">
+            <option value="">All Groups</option>
+        </select>
+        <button id="filter" type="submit">Filter</button>
+    </form>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Group</th>
+            </tr>
+        </thead>
+        <tbody id="results">
+        </tbody>
+    </table>
+    <script src="/js/script.js"></script>
+</body>
+</html>

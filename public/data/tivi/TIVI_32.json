@@ -1,0 +1,13 @@
+{
+	"Ten": "TV Panasonic",
+	"Ma_so": "TIVI_32",
+	"Ky_hieu": "32DS500V",
+	"Don_gia_Ban": 11480000,
+	"Don_gia_Nhap": 10380000,
+	"Nhom_Tivi": {
+		"Ten": "Khác",
+		"Ma_so": "KHAC"
+	},
+	"Danh_sach_Ban_hang": [],
+	"Danh_sach_Nhap_hang": []
+}
